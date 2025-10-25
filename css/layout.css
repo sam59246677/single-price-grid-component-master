@@ -1,0 +1,37 @@
+/* چیدمان کلی */
+/* حالت موبایل: کارت‌ها زیر هم */
+.grid {
+  display: flex;
+  flex-direction: column;   /* کارت‌ها زیر هم */
+  justify-content: space-between;
+  align-items: stretch;
+  gap:0;
+  margin: 0;
+  height: 100dvh;            /* کل صفحه را پر کند */
+  overflow: hidden;         /* جلوگیری از اسکرول */
+    border-radius: var(--radius);
+}
+
+.card {
+  flex: 1 1 0;              /* هر کارت ارتفاع مساوی می‌گیرد */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding);
+}
+
+/* حالت دسکتاپ */
+@media screen and (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "subscription why";
+    gap:0;
+  }
+
+  .card--intro { grid-area: intro; }
+  .card--subscription { grid-area: subscription; }
+  .card--why { grid-area: why; }
+}

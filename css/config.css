@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+:root {
+  /* رنگ‌ها */
+  --clr-primary: hsl(179, 62%, 43%);
+  --clr-primary-fallback: #2bb3b1;
+  --clr-secondary: hsl(71, 73%, 54%);
+  --clr-secondary-fallback: #b8cf3b;
+  --clr-light-gray: hsl(204, 43%, 93%);
+  --clr-grayish-blue: hsl(218, 22%, 67%);
+
+  /* radius و فاصله‌ها */
+  --radius: 0.8rem;
+  --padding: 2.4rem;
+  --gap: 2rem;
+
+  /* تایپوگرافی */
+  --font-main: "Karla", sans-serif;
+  --font-size-base: 1.6rem;
+}
