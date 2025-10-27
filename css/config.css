@@ -14,9 +14,11 @@ html {
   /* radius و فاصله‌ها */
   --radius: 0.8rem;
   --padding: 2.4rem;
+  --padding1: 1.4rem;
   --gap: 2rem;
 
   /* تایپوگرافی */
   --font-main: "Karla", sans-serif;
   --font-size-base: 1.6rem;
+    --font-size-base1: 2.1rem;
 }

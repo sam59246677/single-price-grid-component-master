@@ -1,23 +1,31 @@
 .card {
-  padding:0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-    padding: var(--padding);
-   
+  padding: var(--padding);
+
 }
 
 /* بخش معرفی */
 .card--intro {
   background-color: #fff;
+  margin-top: 0;
+}
+.card__header{
+
+  margin-top: 0;
 }
 
 .card--intro .card__title {
   color: var(--clr-primary);
+  font-size: var( --font-size-base1);
+  padding: 2rem;
+ padding-left: 0;
 }
 
 .card--intro .card__subtitle {
   color: var(--clr-secondary);
+    font-size: var( --font-size-base);
 }
 
 .card--intro .card__text {
@@ -34,8 +42,18 @@
 
 .card--subscription .card__price {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+   align-items: stretch;
   gap: 1rem;
+  padding: var(  --padding);
+   padding-left: 0;
+   padding-bottom: 0;
+}
+
+.card__text1{
+  padding-bottom: var(  --padding);
+   padding-left: 0;
+   padding-top: 0;
 }
 
 .card--subscription .card__amount {
@@ -49,10 +67,14 @@
 
 /* دکمه کشیده */
 .card--subscription .btn--primary {
-  align-self: stretch;
-  width:70%;
+  /* align-self: stretch; */
+  width:100%;
   background-color: var(--clr-secondary) ;
+  padding:2rem;
+  color:inherit;
+   font-size: 2rem;
 }
+
 
 /* بخش چرا ما */
 .card--why {
@@ -64,3 +86,6 @@
   line-height: 1.8;
   opacity: 0.9;
 }
+
+
+

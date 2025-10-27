@@ -7,9 +7,11 @@
   align-items: stretch;
   gap:0;
   margin: 0;
-  height: 100dvh;            /* کل صفحه را پر کند */
-  overflow: hidden;         /* جلوگیری از اسکرول */
+
+  overflow: hidden;       
     border-radius: var(--radius);
+     max-width: 75%;
+     margin-top: 5rem;
 }
 
 .card {
@@ -22,6 +24,27 @@
 
 /* حالت دسکتاپ */
 @media screen and (min-width: 700px) {
+ 
+  body {
+    display: flex;
+    justify-content: center; /* افقی وسط */
+    align-items: center;     /* عمودی وسط */
+    min-height: 100vh;       /* تمام ارتفاع صفحه */
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "subscription why";
+    gap: 0;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0; /* چون حالا با flex وسط‌چین می‌شه */
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -34,4 +57,123 @@
   .card--intro { grid-area: intro; }
   .card--subscription { grid-area: subscription; }
   .card--why { grid-area: why; }
+
+  
+  .card--subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* هم‌تراز به چپ */
+    padding: var(--padding);
+  }
+
+  .card--subscription .card__text {
+    align-self: flex-start;
+    width: auto;
+  }
+
+
+    .card--subscription .btn--primary {
+
+    
+
+
+        width: 261px; /* فقط به اندازه محتوا */
+    max-width: 100%; /* اطمینان که از پاراگراف بزرگ‌تر نشه */
+    align-self: flex-start; /* از چپ شروع کنه */
+    padding-inline: 4rem; /* برای ظاهر بهتر کمی افقی */
+  
+  }
+
+
+
 }
+
+
+
+
+/* حالت موبایل */
+
+
+
+
+
+
+
+@media screen and (max-width: 699px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  body {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    max-width: 90%;
+    margin-top: 0;
+    gap: 0; /* کارت‌ها بچسبند */
+  }
+
+  .card {
+    padding: 1.2rem;
+    margin: 0;
+  }
+
+  .card__title {
+    font-size: 1.8rem;
+  }
+
+  .card__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .card__text {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .btn--primary {
+    padding: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .card--subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card--subscription .card__text1,
+  .card--subscription .btn--primary {
+    width: max-content;
+    align-self: flex-start;
+  }
+
+  .card--subscription .btn--primary {
+    padding: 1rem 2rem;
+    margin-top: 0.5rem;
+          width: 261px; /* فقط به اندازه محتوا */
+    max-width: 100%; /* اطمینان که از پاراگراف بزرگ‌تر نشه */
+    align-self: flex-start; /* از چپ شروع کنه */
+    padding-inline: 4rem; /* برای ظاهر بهتر کمی افقی */
+  }
+
+  .footer{
+    display: none;
+  }
+}
+
+
+
+ 
+
+
+
+
+
+
+
+

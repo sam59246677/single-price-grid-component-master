@@ -49,3 +49,10 @@ a:hover {
 .btn--primary:hover {
   opacity: 0.85;
 }
+
+
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;  /* حذف اسکرول افقی */
+}
